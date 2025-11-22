@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CyberAware - Resources</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f4f6f8; /* Light background */
+        color: #1f1f1f;
+    }
+
+    /* NAVIGATION BAR */
+    .navbar {
+        background: #1f1f1f; /* Black */
+        padding: 15px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+    .navbar a {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+        font-weight: bold;
+        font-size: 16px;
+    }
+    .navbar a:hover {
+        text-decoration: underline;
+    }
+
+    header {
+        text-align: center;
+        font-size: 36px;
+        margin: 25px 0;
+        font-weight: bold;
+        color: #ff6f61; /* Coral */
+    }
+
+    .resource-box {
+        width: 90%;
+        margin: 20px auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 per row */
+        gap: 28px;
+    }
+
+    @media (max-width: 1024px) {
+        .resource-box {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    @media (max-width: 700px) {
+        .resource-box {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .card {
+        background: white;
+        color: #1f1f1f;
+        border-radius: 14px;
+        box-shadow: 0 0 12px rgba(0,0,0,0.25);
+        padding-bottom: 15px;
+        transition: 0.3s;
+        overflow: hidden;
+        text-align: center;
+    }
+
+    .card:hover {
+        transform: scale(1.04);
+        box-shadow: 0 0 20px rgba(255, 111, 97, 0.5); /* Coral Glow */
+    }
+
+    .card img {
+        width: 100%;
+        height: 170px;
+        object-fit: cover;
+    }
+
+    .card h3 {
+        color: #ff6f61; /* Coral */
+        padding: 15px 15px 5px;
+        font-size: 20px;
+    }
+
+    .card p {
+        padding: 0 15px 10px;
+        font-size: 14px;
+        color: #444;
+    }
+
+    .card a {
+        display: inline-block;
+        margin-bottom: 12px;
+        font-weight: bold;
+        text-decoration: none;
+        color: #ff6f61; /* Coral link */
+    }
+
+    .card a:hover {
+        text-decoration: underline;
+    }
+</style>
+</head>
+<body>
+
+<div class="navbar">
+    <div class="logo" style="color:white;font-weight:bold;font-size:20px;">CyberAware</div>
+    <div>
+        <a href="cgpt.html">Home</a>
+        <a href="cgptintro.html">Introduction</a>
+        <a href="cgpttypesofcrime.html">Types of Cybercrime</a>
+        <a href="cgptcomplainthome.html">Complaint</a>
+            </div>
+</div>
+
+<header>Cybersecurity Resources</header>
+
+<div class="resource-box">
+
+    <!-- VIDEO 1 -->
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?crop=entropy&cs=tinysrgb&fit=max&h=170&w=400" alt="Cyber Video">
+        <h3>Cybersecurity Basics</h3>
+        <p>Beginner-friendly complete cybersecurity course.</p>
+        <a href="https://www.youtube.com/watch?v=rv3QKcI3F3w" target="_blank">Watch Video →</a>
+    </div>
+
+    <!-- VIDEO 2 -->
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?crop=entropy&cs=tinysrgb&fit=max&h=170&w=400" alt="Networking">
+        <h3>Networking Essentials</h3>
+        <p>Learn the fundamentals of networking, essential for cyber.</p>
+        <a href="https://www.youtube.com/watch?v=inWWhr5tnEA" target="_blank">Watch Video →</a>
+    </div>
+
+    <!-- GOV SITE 1 -->
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?crop=entropy&cs=tinysrgb&fit=max&h=170&w=400" alt="CERT-IN">
+        <h3>CERT-IN (Gov of India)</h3>
+        <p>Official government cybersecurity alerts and guidelines.</p>
+        <a href="https://www.cert-in.org.in" target="_blank">Visit Site →</a>
+    </div>
+
+    <!-- PAPERS -->
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?crop=entropy&cs=tinysrgb&fit=max&h=170&w=400" alt="Whitepapers">
+        <h3>SANS Whitepapers</h3>
+        <p>Advanced research on cybersecurity, threats, and SOC analysis.</p>
+        <a href="https://www.sans.org/white-papers/" target="_blank">Read Papers →</a>
+    </div>
+
+    <!-- TOOLS -->
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1607799279861-4dd421887fb3?crop=entropy&cs=tinysrgb&fit=max&h=170&w=400" alt="Tools">
+        <h3>Cybersecurity Tools</h3>
+        <p>Learn tools used by ethical hackers and SOC analysts.</p>
+        <a href="https://www.kali.org/tools/" target="_blank">Explore Tools →</a>
+    </div>
+
+    <!-- NEWS SITE -->
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?crop=entropy&cs=tinysrgb&fit=max&h=170&w=400" alt="Cyber News">
+        <h3>Cybersecurity News</h3>
+        <p>Stay updated with latest cybersecurity incidents and alerts.</p>
+        <a href="https://www.cyberscoop.com/" target="_blank">Visit Site →</a>
+    </div>
+
+</div>
+
+</body>
+</html>

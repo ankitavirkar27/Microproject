@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Financial Fraud Complaint Form</title>
+<style>
+/* ===== GLOBAL ===== */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #F7F4F3; /* soft light background */
+    color: #2F2F2F; 
+}
+
+/* ===== NAVIGATION BAR ===== */
+nav {
+    background: #1f1f1f; /* black */
+    display: flex;
+    justify-content: center;
+    padding: 12px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #FF6F61; /* coral hover */
+}
+
+/* ===== FORM CONTAINER ===== */
+.container {
+    background: #ffffff;
+    width: 450px;
+    margin: 40px auto;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.15);
+    border-left: 6px solid #FF6F61; /* coral stripe for theme */
+}
+
+/* ===== HEADINGS ===== */
+h2 {
+    color: #FF6F61; /* coral heading */
+    text-align: center;
+    margin-bottom: 8px;
+    font-size: 28px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* ===== LABELS AND INPUTS ===== */
+label {
+    display: block;
+    margin: 12px 0 5px;
+    font-weight: bold;
+    color: #2F2F2F;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    background: #f9f9f9;
+    font-size: 14px;
+    transition: 0.25s;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: #FF6F61;
+    outline: none;
+    background: #fff;
+}
+
+/* ===== BUTTON ===== */
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 18px;
+    background: #FF6F61; /* coral button */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+button:hover {
+    background: #2F2F2F;
+    color: #FF6F61;
+}
+
+/* ===== SUCCESS MESSAGE ===== */
+#successMessage {
+    color: green;
+    text-align: center;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
+}
+</style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+    <a href="cgpt.html">Home</a>
+    <a href="cgptintro.html">Introduction</a>
+    <a href="cgpttypesofcrime.html">Types of Cybercrime</a>
+    <a href="cgptcomplainthome.html">Complaint</a>
+    <a href="cgptresources.html">Resources</a>
+</nav>
+
+<!-- FORM CONTAINER -->
+<div class="container">
+    <h2>Financial Fraud Complaint Form</h2>
+    <p class="subtitle">Submit your financial fraud report to CyberAware</p>
+    <form id="fraudForm">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" required>
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" required>
+
+        <label for="phone">Phone Number</label>
+        <input type="text" id="phone" required>
+
+        <label for="fraudType">Type of Fraud</label>
+        <select id="fraudType" required>
+            <option value="">-- Select Fraud Type --</option>
+            <option>Phishing</option>
+            <option>Online Payment Fraud</option>
+            <option>Banking Fraud</option>
+            <option>UPI Fraud</option>
+            <option>Investment Scam</option>
+            <option>Other</option>
+        </select>
+
+        <label for="details">Describe the Incident</label>
+        <textarea id="details" rows="5" required></textarea>
+
+        <label for="amount">Amount Lost (if applicable)</label>
+        <input type="number" id="amount">
+
+        <label for="date">Date of Incident</label>
+        <input type="date" id="date" required>
+
+        <button type="submit">Submit Complaint</button>
+    </form>
+    <p id="successMessage" class="hidden">Your complaint has been submitted successfully!</p>
+</div>
+
+<script>
+document.getElementById("fraudForm").addEventListener("submit", function(e) {
+    e.preventDefault(); // prevent page reload
+    // Show alert popup
+    alert('Your complaint has been submitted successfully!');
+    // Show success message below the form
+    document.getElementById("successMessage").classList.remove("hidden");
+    // Reset the form
+    this.reset();
+});
+</script>
+
+</body>
+</html>

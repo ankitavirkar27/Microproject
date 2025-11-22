@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Complaint for Women/Child</title>
+
+<style>
+
+/* PAGE BACKGROUND */
+body {
+    margin: 0;
+    padding: 0;
+    background: #f6f6f6; /* Light grey */
+    font-family: Arial, sans-serif;
+    color: #1f1f1f;
+}
+
+/* NAVIGATION BAR */
+.navbar {
+    background: rgba(0,0,0,0.85); /* Tint of black */
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar a {
+    color: #ff6f61; /* Coral */
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #ff9aae; /* Rose */
+}
+
+/* FORM CARD */
+fieldset {
+    width: 75%;
+    margin: 40px auto;
+    background: white;
+    border-radius: 15px;
+    border: none;
+    padding: 25px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.15);
+}
+
+h2 {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: #ff6f61;
+    margin-top: 30px;
+}
+
+h3, h5 {
+    color: #ff6f61;
+    margin-bottom: 10px;
+}
+
+/* INPUTS */
+input, select {
+    width: 90%;
+    padding: 10px;
+    font-size: 14px;
+    margin-top: 8px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    outline: none;
+    display: block;
+}
+
+input[type="checkbox"] {
+    width: auto;
+    display: inline-block;
+}
+
+/* BUTTON */
+button {
+    background: #ff6f61;
+    color: white;
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #ff9aae;
+    transform: scale(1.05);
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<div class="navbar">
+    <a href="cgpthome.html">Home</a>
+    <a href="cgptintro.html">Introduction</a>
+    <a href="cgpttypesofcrime.html">Types</a>
+    <a href="cgptresources.html">Resources</a>
+    <a href="cgptcomplainthome.html">Complaint</a>
+</div>
+
+<h2><b>COMPLAINT FORM</b></h2>
+
+<fieldset>
+<form id="complaintForm">
+
+<h3>VICTIM INFORMATION</h3>
+
+NAME: <input type="text" id="victimName" required><br><br>
+EMAIL ID: <input type="email" id="victimEmail" required><br><br>
+CONTACT NUMBER: <input type="text" id="victimContact" required><br><br>
+AGE: <input type="number" id="victimAge" required><br><br>
+ADDRESS: <input type="text" id="victimAddress" required><br><br>
+
+<h3><b>Incident Details</b></h3>
+
+TYPE OF COMPLAINT:
+<select id="complaintType" name="complaintType" required>
+    <option value="">--Select--</option>
+    <option>Cyberbullying</option>
+    <option>Online Harassment</option>
+    <option>Cyberstalking</option>
+    <option>Child Pornography</option>
+    <option>Online Grooming</option>
+    <option>Sextortion</option>
+    <option>Revenge Porn / Non-consensual Sharing</option>
+    <option>Identity Theft</option>
+    <option>Phishing / Scams</option>
+    <option>Online Extortion</option>
+    <option>Fraudulent Job/Modeling Offers</option>
+    <option>Online Threats</option>
+    <option>Gender-based Hate Speech</option>
+    <option>Cyber Defamation</option>
+</select><br><br>
+
+<button type="submit">Submit</button>
+</form>
+</fieldset>
+
+<script>
+    // Select the form
+    const form = document.getElementById('complaintForm');
+
+    // Listen for form submission
+    form.addEventListener('submit', function(e) {
+        e.preventDefault(); // Prevent actual form submission
+        const name = document.getElementById('victimName').value;
+        alert(`Thank you, ${name}! Your complaint has been submitted successfully.`);
+        form.reset(); // Clears the form after submission
+    });
+</script>
+
+</body>
+</html>

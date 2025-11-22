@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CyberAware - Complaint Portal</title>
+
+<style>
+
+    /* ---------------- NAVIGATION ---------------- */
+    nav {
+        width: 100%;
+        background: rgba(0,0,0,0.75);
+        padding: 15px 0;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        backdrop-filter: blur(5px);
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: #ff6f61;
+        font-size: 18px;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+        color: #ff9aae;
+    }
+
+    /* ---------------- BODY + BASIC UI ---------------- */
+
+    body {
+        margin: 0;
+        padding: 0;
+        background: #f4f4f4; /* Light BG */
+        font-family: Arial, sans-serif;
+        color: #1a1a1a; 
+    }
+
+    .container {
+        width: 90%;
+        max-width: 900px;
+        margin: auto;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .title {
+        font-size: 42px;
+        text-align: center;
+        color: #ff6f61; /* Coral */
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .subtitle {
+        font-size: 18px;
+        text-align: center;
+        color: #ff9aae; /* Rose */
+        margin-bottom: 30px;
+    }
+
+    .section-title {
+        margin-top: 35px;
+        font-size: 24px;
+        color: #ff6f61;
+        font-weight: bold;
+        border-left: 5px solid #ff6f61;
+        padding-left: 10px;
+        margin-bottom: 15px;
+    }
+
+    label {
+        display: block;
+        margin-top: 12px;
+        font-size: 16px;
+        color: #1a1a1a;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    .input-box {
+        width: 100%;
+        padding: 12px;
+        border-radius: 10px;
+        border: 2px solid #ccc;
+        outline: none;
+        margin-bottom: 10px;
+        background: #fff;
+        font-size: 16px;
+    }
+
+    .input-box:focus {
+        border-color: #ff6f61;
+        box-shadow: 0 0 5px rgba(255,111,97,0.5);
+    }
+
+    .btn {
+        background: #ff6f61;
+        border: none;
+        padding: 12px 25px;
+        border-radius: 10px;
+        font-size: 16px;
+        color: white;
+        cursor: pointer;
+        margin-top: 8px;
+        transition: 0.3s;
+        width: 100%;
+        font-weight: bold;
+    }
+
+    .btn:hover {
+        background: #ff9aae;
+        transform: scale(1.05);
+    }
+
+
+    /* ---------------- OPTION CARDS ---------------- */
+    .options {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 20px;
+    }
+
+    .option-card {
+        background: #fff;
+        width: 30%;
+        min-width: 260px;
+        color: #1a1a1a;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 0 15px rgba(0,0,0,0.15);
+        margin-bottom: 20px;
+        transition: 0.3s;
+        text-align: center;
+        border-top: 6px solid #ff6f61;
+    }
+
+    .option-card:hover {
+        transform: scale(1.07);
+        box-shadow: 0 0 20px rgba(255,111,97,0.4);
+    }
+
+    .option-card h3 {
+        font-size: 20px;
+        color: #ff6f61;
+        margin-bottom: 10px;
+    }
+
+    .option-card p {
+        color: #333;
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+
+    .option-btn {
+        display: inline-block;
+        text-decoration: none;
+        background: #ff6f61;
+        color: white;
+        padding: 10px 18px;
+        border-radius: 10px;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    .option-btn:hover {
+        background: #ff9aae;
+    }
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION BAR -->
+<nav>
+    <ul>
+        <li><a href="cgptintro.html">Introduction</a></li>
+        <li><a href="cgpttypecrime.html">Types of Crime</a></li>
+        <li><a href="cgpt.html">Home</a></li>
+        <li><a href="cgptresources.html">Resources</a></li>
+            </ul>
+</nav>
+
+
+<div class="container">
+
+    <div class="title">CyberAware Complaint Portal</div>
+    <div class="subtitle">Check complaint status or file a new one</div>
+
+
+    <!-- STATUS CHECK SECTION -->
+    <div class="section-title">🔎 Check Your Complaint Status</div>
+
+    <label>Enter Complaint Number</label>
+    <input type="text" class="input-box" placeholder="e.g., CMP12345">
+
+    <label>Enter Your Name</label>
+    <input type="text" class="input-box" placeholder="Your Full Name">
+
+    <button class="btn">Check Status</button>
+
+
+    <!-- NEW COMPLAINT SECTION -->
+    <div class="section-title">📝 File a New Complaint</div>
+
+    <div class="options">
+
+        <div class="option-card">
+            <h3>General Cybercrime</h3>
+            <p>Phishing, online fraud, identity theft</p>
+            <a href="MPcomplaint form other.html" class="option-btn">File Complaint</a>
+        </div>
+
+        <div class="option-card">
+            <h3>Women / Child Complaint</h3>
+            <p>Harassment, stalking, sextortion, child safety</p>
+            <a href="MP complaint form women and kids.html" class="option-btn">File Complaint</a>
+        </div>
+
+        <div class="option-card">
+            <h3>Financial Fraud</h3>
+            <p>UPI scams, card fraud, bank fraud</p>
+            <a href="financialfraud.html" class="option-btn">File Complaint</a>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

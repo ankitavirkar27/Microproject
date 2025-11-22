@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Types of Cybercrime</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f7f7f7;
+        color: #222;
+    }
+
+    /* ===== NAVBAR ===== */
+    nav {
+        background: #2b2b2b;
+        padding: 15px 30px;
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+    nav a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 16px;
+        transition: 0.3s;
+    }
+    nav a:hover {
+        color: #ff6f61;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+        background: url('https://lawtrend.in/wp-content/uploads/2024/06/cyber-crime-digital-arrest.jpg') no-repeat center center;
+        background-size: cover;
+        padding: 100px 20px;
+        text-align: center;
+        color: white;
+        position: relative;
+    }
+    header::before {
+        content: "";
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background: rgba(0,0,0,0.5);
+        z-index: 1;
+    }
+    header h1, header p {
+        position: relative;
+        z-index: 2;
+        margin: 0;
+    }
+
+    /* ===== CONTAINER ===== */
+    .container {
+        width: 90%;
+        max-width: 1000px;
+        margin: 40px auto;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    /* ===== CRIME BOX ===== */
+    .crime-box {
+        background: white;
+        border-left: 6px solid #ff6f61;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 12px rgba(0,0,0,0.1);
+        text-align: center;
+        transition: 0.3s;
+    }
+    .crime-box:hover {
+        transform: scale(1.03);
+        box-shadow: 0 0 20px rgba(255,111,97,0.3);
+    }
+
+    .title {
+        font-size: 22px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-bottom: 15px;
+    }
+
+    .content {
+        display: none;
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .content img {
+        max-width: 80%;
+        height: auto;
+        margin: 15px auto;
+        border-radius: 8px;
+        display: block;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+        background: #2b2b2b;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        margin-top: 40px;
+    }
+
+    @media(max-width:600px){
+        .crime-box {padding: 15px;}
+        header {padding: 70px 10px;}
+    }
+</style>
+
+<script>
+function toggleBox(id) {
+    const content = document.getElementById(id);
+    content.style.display = (content.style.display === "block") ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <a href="cgpt.html">Home</a>
+    <a href="cgptintro.html">Introduction</a>
+    <a href="cgptresources.html">Resources</a>
+    <a href="cgptcomplainthome.html">Complaint</a>
+</nav>
+
+<!-- HEADER -->
+<header>
+    <h1>Types of Cybercrime</h1>
+    
+</header>
+
+<!-- MAIN CONTAINER -->
+<div class="container">
+
+    <!-- 1 Phishing -->
+    <div class="crime-box">
+        <div class="title" onclick="toggleBox('c1')">Phishing</div>
+        <div class="content" id="c1">
+            <p><strong>What is it?</strong><br>Fake emails/messages used to steal passwords, bank details, or personal info.</p>
+            <p><strong>Government Steps:</strong><br>• CERT-IN alerts<br>• Blocking fraudulent websites<br>• Awareness programs through Digital India</p>
+            <p><strong>What citizens can do:</strong><br>• Never click unknown links<br>• Check sender email<br>• Enable 2FA</p>
+            <img src="https://img.freepik.com/free-vector/phishing-concept-illustration_114360-1811.jpg" alt="Phishing Image">
+        </div>
+    </div>
+
+    <!-- 2 Identity Theft -->
+    <div class="crime-box">
+        <div class="title" onclick="toggleBox('c2')">Identity Theft </div>
+        <div class="content" id="c2">
+            <p><strong>What is it?</strong><br>Criminals steal your Aadhaar, PAN, or bank identity to misuse it.</p>
+            <p><strong>Government Steps:</strong><br>• Strict KYC rules<br>• Cyber Financial Crime reporting portal</p>
+            <p><strong>What citizens can do:</strong><br>• Do not share OTP<br>• Keep documents private</p>
+            <img src="https://img.freepik.com/free-vector/identity-theft-concept-illustration_114360-1822.jpg" alt="Identity Theft">
+        </div>
+    </div>
+
+    <!-- 3 Online Fraud -->
+    <div class="crime-box">
+        <div class="title" onclick="toggleBox('c3')">Online Shopping / UPI Fraud</div>
+        <div class="content" id="c3">
+            <p><strong>What is it?</strong><br>Fake sellers, fake payment links, or UPI scam calls.</p>
+            <p><strong>Government Steps:</strong><br>• 1930 Cyber Fraud helpline<br>• Razorpay/PhonePe fraud detection</p>
+            <p><strong>What citizens can do:</strong><br>• Only buy from trusted sites<br>• Double check QR codes</p>
+            <img src="https://img.freepik.com/free-vector/online-fraud-illustration_114360-1710.jpg" alt="Online Fraud">
+        </div>
+    </div>
+
+    <!-- 4 Cyberbullying -->
+    <div class="crime-box">
+        <div class="title" onclick="toggleBox('c4')">Cyberbullying & Harassment</div>
+        <div class="content" id="c4">
+            <p><strong>What is it?</strong><br>Online threats, blackmail, abuse, or humiliation.</p>
+            <p><strong>Government Steps:</strong><br>• IPC 354D, IT Act Section 66E<br>• Women Cyber Cell support</p>
+            <p><strong>What citizens can do:</strong><br>• Block & report<br>• Keep screenshots as evidence</p>
+            <img src="https://img.freepik.com/free-vector/cyber-bullying-concept-illustration_114360-1812.jpg" alt="Cyberbullying">
+        </div>
+    </div>
+
+    <!-- 5 Hacking -->
+    <div class="crime-box">
+        <div class="title" onclick="toggleBox('c5')">Hacking</div>
+        <div class="content" id="c5">
+            <p><strong>What is it?</strong><br>Unauthorized access to computers, networks, or accounts.</p>
+            <p><strong>Government Steps:</strong><br>• National Cyber Coordination Centre (NCCC)<br>• CERT-IN monitoring</p>
+            <p><strong>What citizens can do:</strong><br>• Strong passwords<br>• Update software</p>
+            <img src="https://img.freepik.com/free-vector/hacker-concept-illustration_114360-1814.jpg" alt="Hacking">
+        </div>
+    </div>
+
+    <!-- 6 Data Breach -->
+    <div class="crime-box">
+        <div class="title" onclick="toggleBox('c6')">Data Breach</div>
+        <div class="content" id="c6">
+            <p><strong>What is it?</strong><br>Personal or company data leaked online.</p>
+            <p><strong>Government Steps:</strong><br>• New data protection bill (DPDP Act)<br>• Mandatory breach reporting</p>
+            <p><strong>What citizens can do:</strong><br>• Avoid giving data to shady apps</p>
+            <img src="https://img.freepik.com/free-vector/data-breach-concept-illustration_114360-1815.jpg" alt="Data Breach">
+        </div>
+    </div>
+
+    <!-- 7 Social Engineering -->
+    <div class="crime-box">
+        <div class="title" onclick="toggleBox('c7')">Social Engineering</div>
+        <div class="content" id="c7">
+            <p><strong>What is it?</strong><br>Tricks used to fool people into revealing secrets.</p>
+            <p><strong>What citizens can do:</strong><br>• Think before trusting unknown people online</p>
+            <img src="https://img.freepik.com/free-vector/social-engineering-concept-illustration_114360-1817.jpg" alt="Social Engineering">
+        </div>
+    </div>
+
+    <!-- 8 Malware / Virus -->
+    <div class="crime-box">
+        <div class="title" onclick="toggleBox('c8')">Malware / Virus Attacks</div>
+        <div class="content" id="c8">
+            <p><strong>What is it?</strong><br>Harmful software that steals or deletes data.</p>
+            <img src="https://img.freepik.com/free-vector/malware-concept-illustration_114360-1818.jpg" alt="Malware">
+        </div>
+    </div>
+
+    <!-- 9 Ransomware -->
+    <div class="crime-box">
+        <div class="title" onclick="toggleBox('c9')">Ransomware</div>
+        <div class="content" id="c9">
+            <p><strong>What is it?</strong><br>Hackers lock your files and demand money.</p>
+            <img src="https://img.freepik.com/free-vector/ransomware-concept-illustration_114360-1820.jpg" alt="Ransomware">
+        </div>
+    </div>
+
+    <!-- 10 Cyberstalking -->
+    <div class="crime-box">
+        <div class="title" onclick="toggleBox('c10')">Cyberstalking</div>
+        <div class="content" id="c10">
+            <p><strong>What is it?</strong><br>Repeated online monitoring of someone's activities.</p>
+            <img src="https://img.freepik.com/free-vector/cyberstalking-concept-illustration_114360-1821.jpg" alt="Cyberstalking">
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    © 2025 Cyber Awareness Project | All Rights Reserved
+</footer>
+
+</body>
+</html>

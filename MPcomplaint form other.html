@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cybercrime Complaint Registration Form</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #ffffff; /* Pure white background */
+    }
+
+    /* ===== NAVBAR ===== */
+    nav {
+        background: #1f1f1f; /* black */
+        display: flex;
+        justify-content: center;
+        padding: 12px 0;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 20px;
+        font-weight: bold;
+        font-size: 16px;
+        transition: 0.3s;
+    }
+
+    nav a:hover {
+        color: #FF6F61; /* coral hover */
+    }
+
+    /* ===== FORM CONTAINER ===== */
+    .container {
+        max-width: 600px;
+        margin: 40px auto;
+        padding: 30px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        border-top: 7px solid #FF6F61; /* theme color */
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 25px;
+        color: #222;
+    }
+
+    label {
+        display: block;
+        margin-top: 15px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    input, select, textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 6px;
+        border-radius: 5px;
+        border: 1px solid #bbb;
+        background: #fff;
+        font-size: 14px;
+    }
+
+    textarea {
+        resize: vertical;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 12px;
+        background-color: #FF6F61; /* theme button color */
+        color: white;
+        font-size: 16px;
+        border: none;
+        border-radius: 6px;
+        margin-top: 20px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: 0.25s;
+    }
+
+    .btn:hover {
+        background-color: #d45734;
+    }
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <a href="cgpt.html">Home</a>
+    <a href="cgptintro.html">Introduction</a>
+    <a href="cgpttypesofcrime.html">Types of Cybercrime</a>
+    <a href="cgptcomplainthome.html">Complaint</a>
+    <a href="cgptresources.html">Resources</a>
+</nav>
+
+<!-- FORM CONTAINER -->
+<div class="container">
+    <h2>Cybercrime Complaint Registration</h2>
+
+    <form id="complaintForm" action="#" method="post" enctype="multipart/form-data">
+
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="contact">Contact Number</label>
+        <input type="tel" id="contact" name="contact" required pattern="[0-9]{10}" maxlength="10">
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="incident_date">Date of Incident</label>
+        <input type="date" id="incident_date" name="incident_date" required>
+
+        <label for="incident_type">Type of Cybercrime</label>
+        <select id="incident_type" name="incident_type" required>
+            <option value="">Select</option>
+            <option value="phishing">Phishing</option>
+            <option value="hacking">Hacking</option>
+            <option value="online_fraud">Online Fraud</option>
+            <option value="identity_theft">Identity Theft</option>
+            <option value="cyber_bullying">Cyber Bullying</option>
+            <option value="others">Others</option>
+        </select>
+
+        <label for="details">Incident Details</label>
+        <textarea id="details" name="details" placeholder="Describe the incident in detail" required></textarea>
+
+        <label for="evidence">Upload Evidence (image, pdf, etc.)</label>
+        <input type="file" id="evidence" name="evidence" accept=".jpg,.png,.pdf,.doc,.docx">
+
+        <button type="submit" class="btn">Submit Complaint</button>
+
+    </form>
+</div>
+
+<script>
+    // Select the form
+    const form = document.getElementById('complaintForm');
+
+    // Listen for form submission
+    form.addEventListener('submit', function(e) {
+        e.preventDefault(); // Prevent default form submission
+        const name = document.getElementById('name').value;
+        alert(`Thank you, ${name}! Your complaint has been submitted successfully.`);
+        form.reset(); // Reset the form fields
+    });
+</script>
+
+</body>
+</html>
